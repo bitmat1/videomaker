@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "videomaker": {
+      "command": ".venv/bin/python",
+      "args": ["mcp_server/server.py"]
+    },
+    "remotion-docs": {
+      "command": "npx",
+      "args": ["-y", "@remotion/mcp@4.0.534"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.83", "--headless"]
+    },
+    "elevenlabs": {
+      "command": "uvx",
+      "args": ["elevenlabs-mcp"],
+      "env": {
+        "ELEVENLABS_API_KEY": "${ELEVENLABS_API_KEY}",
+        "ELEVENLABS_MCP_BASE_PATH": "assets/generated"
+      }
+    }
+  }
+}

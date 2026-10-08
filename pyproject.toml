@@ -1,0 +1,40 @@
+[project]
+name = "videomaker"
+version = "0.1.0"
+description = "Videos on demand: an AI writes the plan, open-source tools make the film"
+requires-python = ">=3.11"
+# The pipeline core is standard library only. Everything below is opt-in.
+dependencies = []
+
+[project.optional-dependencies]
+# Neural voices. kokoro: Apache-2.0, 82M params, CPU-friendly.
+# piper: MIT, fast ONNX voices in many languages.
+tts = ["kokoro>=0.9", "soundfile", "piper-tts>=1.2"]
+# Word-level timings for captions, aligned to what was actually spoken.
+captions = ["faster-whisper>=1.0"]
+# Download from video pages; split long footage into shots; CA bundle on macOS.
+fetch = ["yt-dlp", "scenedetect[opencv-headless]>=0.6", "certifi"]
+# The MCP server that exposes the pipeline as tools.
+mcp = ["mcp>=2.0"]
+dev = ["ruff", "mypy", "pytest"]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.ruff]
+target-version = "py311"
+line-length = 92
+src = ["pipeline", "mcp_server"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["config", "common", "manifest"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+mypy_path = "pipeline"
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
