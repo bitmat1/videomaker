@@ -1,0 +1,7 @@
+{
+  "slug": "demo",
+  "prompt": "A short demonstration of the videomaker pipeline.",
+  "duration_s": 15,
+  "format": "landscape",
+  "tone": "clear, warm"
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Videomaker",
+  "format": "landscape",
+  "fps": 30,
+  "style": {
+    "accent": "#ffb000"
+  },
+  "voice": {
+    "backend": "mock"
+  },
+  "scenes": [
+    {
+      "id": "s01",
+      "onscreen": "Videomaker",
+      "visual": {
+        "kind": "title"
+      },
+      "motion": "none",
+      "transition": "cut",
+      "seconds": 2.5,
+      "narration": ""
+    },
+    {
+      "id": "s02",
+      "narration": "You describe the video you want.",
+      "onscreen": "1. Brief",
+      "visual": {
+        "kind": "video",
+        "query": "typing on laptop keyboard"
+      },
+      "motion": "zoom-in",
+      "transition": "fade"
+    },
+    {
+      "id": "s03",
+      "narration": "An AI writes the plan, scene by scene.",
+      "onscreen": "2. Plan",
+      "visual": {
+        "kind": "photo",
+        "query": "storyboard sketches"
+      },
+      "motion": "pan-left",
+      "transition": "fade"
+    },
+    {
+      "id": "s04",
+      "narration": "Open tools find the footage, speak the words and render the film.",
+      "onscreen": "3. Make",
+      "visual": {
+        "kind": "video",
+        "query": "film camera"
+      },
+      "motion": "zoom-out",
+      "transition": "fade"
+    }
+  ],
+  "music": {}
+}

@@ -1,0 +1,7 @@
+{
+  "slug": "tides-short",
+  "prompt": "A 30 second vertical explainer on why the sea has two tides a day, for curious teenagers. End on the line: the Moon is always pulling.",
+  "duration_s": 30,
+  "format": "portrait",
+  "tone": "curious, upbeat, plain English"
+}

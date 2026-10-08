@@ -1,0 +1,22 @@
+{
+  "name": "videomaker-remotion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Renderer for videomaker: draws remotion/public/project.json",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render Video out/video.mp4",
+    "still": "remotion still Video out/frame.png --frame=30",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.4"
+  }
+}
